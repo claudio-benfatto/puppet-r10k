@@ -8,13 +8,13 @@ class { 'r10k':
   version           => '1.4.0',
   sources           => {
     'puppet' => {
-      'remote'  => 'git@git.foodity.com:claudio.benfatto/puppet-control.git',
+      'remote'  => 'git@github.com:foodity/puppet-base.git',
       'basedir' => "${::settings::confdir}/environments",
       'prefix'  => false,
      },
 
     'hiera' => {
-      'remote' => 'git@git.foodity.com:claudio.benfatto/puppet-hieradata.git',
+      'remote' => 'git@github.com:foodity/puppet-hieradata.git',
       'basedir'=> "${::settings::confdir}/data",
       'prefix' => false,
      }
