@@ -46,7 +46,6 @@ package { 'highline':
 
 Package['build-essential'] ->
 Package <| provider == 'gem' |> ->
-Class['r10k::install::portage'] ->
 Anchor['r10k::ruby_done']
 
 
