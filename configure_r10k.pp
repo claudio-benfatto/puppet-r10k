@@ -39,11 +39,6 @@ package { 'hiera-eyaml':
       provider => 'gem',
 }
 
-package { 'hiera-eyaml-gpg':
-      ensure   => 'installed',
-      provider => 'gem',
-}
-
 package { 'highline':
       ensure   => 'installed',
       provider => 'gem',
