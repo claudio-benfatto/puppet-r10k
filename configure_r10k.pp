@@ -8,7 +8,7 @@ class { 'r10k':
   version           => '1.4.0',
   sources           => {
     'puppet' => {
-      'remote'  => 'git@github.com:foodity/puppet-base.git',
+      'remote'  => 'git@git.foodity.com:claudio.benfatto/puppet-control.git',
       'basedir' => "${::settings::confdir}/environments",
       'prefix'  => false,
      },
