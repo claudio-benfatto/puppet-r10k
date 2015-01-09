@@ -25,8 +25,12 @@ class { 'r10k':
   manage_modulepath => false,
 }
 
+package { 'build-essential':
+     ensure => 'installed',
+}
+
 package { 'deep_merge':
-      ensure       => 'installed',
+      ensure   => 'installed',
       provider => 'gem',
 }
 
@@ -45,4 +49,10 @@ package { 'highline':
       provider => 'gem',
 }
 
-Package <| provider == 'gem' |> -> Anchor['r10k::ruby_done']
+Package['build-essential'] ->
+Package <| provider == 'gem' |> ->
+Class['r10k::install::portage'] ->
+Anchor['r10k::ruby_done']
+
+
+
