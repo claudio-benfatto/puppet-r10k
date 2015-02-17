@@ -5,7 +5,7 @@
 ##  This manifest requires the zack/R10k module
 
 class { 'r10k':
-  version           => '1.4.0',
+  version           => '1.4.1',
   sources           => {
     'puppet' => {
       'remote'  => 'git@git.foodity.com:claudio.benfatto/puppet-control.git',
