@@ -11,13 +11,13 @@ class { 'r10k':
       'remote'  => 'git@git.foodity.com:claudio.benfatto/puppet-control.git',
       'basedir' => "${::settings::confdir}/environments",
       'prefix'  => false,
-     },
+    },
 
     'hiera' => {
       'remote' => 'git@github.com:foodity/puppet-hieradata.git',
       'basedir'=> "${::settings::confdir}/data",
       'prefix' => false,
-     }
+      }
     },
 
   purgedirs         => ["${::settings::confdir}/environments",
@@ -26,7 +26,7 @@ class { 'r10k':
 }
 
 package { 'build-essential':
-     ensure => 'installed',
+    ensure => 'installed',
 }
 
 package { 'deep_merge':
@@ -47,6 +47,3 @@ package { 'highline':
 Package['build-essential'] ->
 Package <| provider == 'gem' |> ->
 Anchor['r10k::ruby_done']
-
-
-
