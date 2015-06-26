@@ -7,7 +7,7 @@
 class { 'r10k':
   version           => '1.5.1',
   provider          => 'gem',
-  manage_ruby_dependency => false,
+  manage_ruby_dependency => 'ignore',
 
   sources           => {
     'puppet' => {
