@@ -23,8 +23,6 @@ class { 'r10k':
       }
     },
 
-  purgedirs         => ["${::settings::confdir}/environments",
-                        "${::settings::confdir}/data"],
   manage_modulepath => false,
 }
 
